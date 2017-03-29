@@ -1,0 +1,35 @@
+<html>
+<script type="text/javascript" src="angular.min.js"></script>
+<script type="text/javascript" src="moduletest.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"/>
+<body ng-app="table">
+
+<section ng-controller="ControlTable as ctable">
+  <ul class="nav nav-pills" style="width: 207px ; background-color:black">
+
+    <li ng-class="{active : ctable.activartabla(1) }">
+      <a href ng-click="ctable.clickTabla(1)">Test 1</a></li>
+
+    <li ng-class="{active: ctable.activartabla (2) }">
+      <a href ng-click="ctable.clickTabla (2)">Test 2</a></li>
+
+    <li ng-class="{active : ctable.activartabla (3) }">
+      <a href ng-click="ctable.clickTabla(3)">Test 3</a></li>
+  </ul>
+
+  <div class ="panel" ng-show="ctable.activartabla(1)">
+      <h2>Test description 1</h2>
+  </div>
+  <div class ="panel" ng-show="ctable.activartabla(2)">
+      <h2>Test description 2</h2>
+  </div>
+  <div class ="panel" ng-show="ctable.activartabla(3)">
+      <h2>Test description 3</h2>
+  </div>
+
+</section>
+
+
+
+</body>
+</html>
